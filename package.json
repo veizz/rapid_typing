@@ -1,28 +1,40 @@
 {
   "name": "rapid_typing",
   "version": "0.0.1",
-  "description": "A simple keyboard trainer to help on developing fast ten-typing skills",
-  "main": "index.js",
+  "description": "keyboard trainer",
+  "main": "main.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "electron-forge start",
     "postinstall": "webpack",
-    "dev": "webpack && node app.js"
+    "dev": "webpack && node app.js",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Neest/rapid_typing.git"
   },
-  "author": "",
+  "author": "veizzsmile@gmail.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Neest/rapid_typing/issues"
   },
   "homepage": "https://github.com/Neest/rapid_typing#readme",
   "dependencies": {
-    "express": "^4.14.0",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.22.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "express": "^4.14.0",
     "webpack": "^1.14.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-deb": "^7.2.0",
+    "@electron-forge/maker-rpm": "^7.2.0",
+    "@electron-forge/maker-squirrel": "^7.2.0",
+    "@electron-forge/maker-zip": "^7.2.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
+    "electron": "^28.0.0"
   }
 }
