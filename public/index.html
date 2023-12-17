@@ -10,9 +10,6 @@
 <body>
 
   <div class="container">
-
-    <a id="github" target="blank" href="https://github.com/Neest/rapid_typing">Fork me on github</a>
-
     <div class="topbar">
       <div class="speed-stats">
         <span>
@@ -47,12 +44,12 @@
     <div class="wordline-container">
       <input class="inputline" type="text" spellcheck="false" autofocus/>
       <div class="wordline">
-        <span class="placeholder">Words are coming... 
+        <span class="placeholder">Words are coming...
           <img src="img/wait.gif">
         </span>
       </div>
     </div>
-    
+
     <div class="keyboard-toolbar">
       <i id="keyboard-toggle" class="tool ion-eye">
         <span class="hint">Toggle keyboard</span>
@@ -67,7 +64,7 @@
 
     <div class="keyboard-container">
       <div class="keyline">
-        <div class="key group-1" id="`">`
+        <div class="key group-1" id="backquote">`
           <div class="subkey">~</div>
         </div>
         <div class="key group-1" id="1">1
@@ -100,8 +97,8 @@
         <div class="key group-8" id="0">0
           <div class="subkey">)</div>
         </div>
-        <div class="key group-8" id="underscore">_
-          <div class="subkey">-</div>
+        <div class="key group-8" id="minus">-
+          <div class="subkey">_</div>
         </div>
         <div class="key group-8" id="equal">=
           <div class="subkey">+</div>
@@ -120,13 +117,13 @@
         <div class="key group-6" id="i">i</div>
         <div class="key group-7" id="o">o</div>
         <div class="key group-8" id="p">p</div>
-        <div class="key group-8" id="[">[
+        <div class="key group-8" id="bracket-left">[
           <div class="subkey">{</div>
         </div>
-        <div class="key group-8" id="]">]
+        <div class="key group-8" id="bracket-right">]
           <div class="subkey">}</div>
         </div>
-        <div class="key group-8" id="\">\
+        <div class="key group-8" id="backslash">\
           <div class="subkey">|</div>
         </div>
       </div>
@@ -141,11 +138,11 @@
         <div class="key group-5" id="j">j</div>
         <div class="key group-6" id="k">k</div>
         <div class="key group-7" id="l">l</div>
-        <div class="key group-8" id=";">;
+        <div class="key group-8" id="semicolon">;
           <div class="subkey">:</div>
         </div>
-        <div class="key group-8" id=""">"
-          <div class="subkey">,</div>
+        <div class="key group-8" id="quote">'
+          <div class="subkey">"</div>
         </div>
         <div class="key non-group" id="enter">Enter</div>
       </div>
@@ -158,13 +155,13 @@
         <div class="key group-4" id="b">b</div>
         <div class="key group-5" id="n">n</div>
         <div class="key group-5" id="m">m</div>
-        <div class="key group-6" id="<"><
-          <div class="subkey">,</div>
+        <div class="key group-6" id="comma">,
+          <div class="subkey">&lt;</div>
         </div>
-        <div class="key group-7" id=">">>
-          <div class="subkey">.</div>
+        <div class="key group-7" id="dot">.
+          <div class="subkey">&gt;</div>
         </div>
-        <div class="key group-8" id="/">/
+        <div class="key group-8" id="slash">/
           <div class="subkey">?</div>
         </div>
         <div class="key group-8" id="shift-r">shift</div>
@@ -174,9 +171,9 @@
       </div>
     </div>
   </div>
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="js/utils/words.js"></script>
+  <script src="js/utils/words-symbol.js"></script>
   <script src="build/build.js"></script>
 </body>
 </html>

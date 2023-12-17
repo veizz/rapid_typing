@@ -10,7 +10,7 @@ export default class Generator {
   /**************
   * PRIVATE
   **************/
-  _rand(low, high) { 
+  _rand(low, high) {
     return Math.floor((high-low+1)*Math.random())+Math.floor(low)
   }
 
@@ -19,7 +19,7 @@ export default class Generator {
 
     for(let i = 0; i < this.number; i++)
       output.push(words[this._rand(0, words.length-1)])
-    
+
     return output;
   }
 
@@ -30,7 +30,7 @@ export default class Generator {
         array[i] = array[j];
         array[j] = temp;
     }
-    
+
     return array;
   }
 
