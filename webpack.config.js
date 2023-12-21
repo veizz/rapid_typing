@@ -1,20 +1,31 @@
-module.exports = {
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
-  entry: './public/js/main.js',
+module.exports = (env) => {
+  const IS_PRODUCTION = env.production || process.env.NODE_ENV === "production";
 
-  output: {
-    path: './public/build',
-    filename: './build.js'
-  },
+  return {
+    mode: IS_PRODUCTION ? "production" : "development",
 
-  devtool: 'inline-source-map',
+    entry: "./src/js/main.js",
 
-  module: {
-    loaders: [{
-      test: /\.js$/,
-      loader: 'babel?presets[]=es2015',
-      exclude: /\/node_modules\//,
-    }],
-  },
+    output: {
+      path: path.resolve(__dirname, "./public"),
+      filename: "js/[name].[contenthash].bundle.js",
+    },
 
-}
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: "./src/index.html",
+      }),
+    ],
+
+    devServer: {
+      static: {
+        directory: path.join(__dirname, "public"),
+      },
+      compress: true,
+      port: 8000,
+    },
+  };
+};

@@ -1,4 +1,4 @@
-window.words = [
+const words = [
   'int', 'main', 'include', 'iostream', 'iomanip',
   'using', 'namespace', 'std', 'return',
   'cout', 'cin', 'if', 'else', 'for',
@@ -13,3 +13,5 @@ window.words = [
   '5', '6', '7', '8', '9',
   'endl', 'setprecision', 'fixed', 'setfill', 'setw',
 ]
+
+export default words;

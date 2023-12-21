@@ -2,5 +2,8 @@ node_modules/
 build/
 npm-debug.log
 .vscode
+.DS_Store
+public/index.html
+public/js
 
 out/

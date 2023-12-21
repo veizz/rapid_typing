@@ -42,7 +42,6 @@ export default class Keyboard {
   }
 
   _isUpper(letter) {
-    // return letter == letter.toUpperCase() || this._isUpperSymbol(letter);
     return this.upperCasedLetter.includes(letter);
   }
 
@@ -66,7 +65,6 @@ export default class Keyboard {
   }
 
   _toLower(letter) {
-    console.log(letter);
     if (this.lowerCasedLetter.includes(letter)) {
       return letter;
     }
@@ -96,7 +94,6 @@ export default class Keyboard {
 
       let isUpper = this._isUpper(toPress);
 
-      // toPress = toPress.toLowerCase();
       toPress = this._toLower(toPress);
 
 
@@ -107,7 +104,6 @@ export default class Keyboard {
         this.keys.filter(`#shift-${side}`).addClass(this.keyTargetClass);
       }
 
-      // this.keys.filter(`#${toPress}`).addClass(this.keyTargetClass);
       this.keys.filter(`#${this._getKeySelector(toPress)}`).addClass(this.keyTargetClass);
 
     }

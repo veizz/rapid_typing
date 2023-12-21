@@ -1,3 +1,4 @@
+import words from '../utils/words-cpp.js';
 export default class Generator {
   constructor(args) {
     this.interval = args.interval || 6e4;
