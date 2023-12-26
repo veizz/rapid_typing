@@ -1,3 +1,4 @@
+import Base from './base.js'
 const words = [
   '{}', '()', '[]', '||', '&&', '!', '//',
   ';,.:', '->', '=>', '>>', '<<',
@@ -5,4 +6,13 @@ const words = [
   '`', '!', '~', '@', '$', '%', '^', '&', '*', '-', '+', '=', '|', '\\', '/',
 ]
 
-export default words
+class WordsSymbol extends Base {
+  constructor() {
+    super();
+    this.random = false;
+    this._init(words);
+  }
+
+}
+
+export default WordsSymbol;

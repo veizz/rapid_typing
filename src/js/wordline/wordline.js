@@ -1,12 +1,15 @@
-import Generator from './generator';
 import SpeedStats from './speed_stats'
 import ErrorStats from './error_stats';
 import Counter from './counter';
 import Keyboard from '../keyboard/keyboard';
 
+import wordLists from '../constants/word-lists';
+
 export default class Wordline {
   constructor(mode) {
     this.mode = mode;
+    let WordClass = wordLists.find(item => item.id == mode).class;
+    this.words = new WordClass();
 
     this.inputline = $('.inputline');
     this.wordline = $('.wordline');
@@ -16,7 +19,6 @@ export default class Wordline {
     this.errorStats = new ErrorStats();
     this.speedStats = new SpeedStats();
     this.errorCounter = new Counter();
-    this.generator = new Generator({ interval: 6e4, number: 8 });
     this.keyboard = new Keyboard();
     this.letters = '';
 
@@ -47,7 +49,7 @@ export default class Wordline {
 
       if(!isOk) {
         this.letters.length ? this.highlightMistake() : this.fill();
-      } 
+      }
 
       return isOk;
     });
@@ -76,7 +78,7 @@ export default class Wordline {
         if( $(`.${this.untypedClass}`).length == 0) {
           this.clean();
         }
-      } 
+      }
 
     });
   }
@@ -105,7 +107,7 @@ export default class Wordline {
       this.inputline.removeClass(this.wrongClass)
       untyped.removeClass(this.wrongClass)
     } , 200);
-    
+
     this.errorCounter.up();
 
     return false
@@ -147,10 +149,7 @@ export default class Wordline {
 
   fill(isInit) {
 
-    if(this.mode == 'beginner')
-      this.letters = this.generator.getOne();
-    else
-      this.letters = this.generator.getWords();
+    this.letters = this.words.getLine().join(' ');
 
     if(!isInit) {
       this.errorStats.update(this.errorCounter, this.letters);
@@ -170,7 +169,7 @@ export default class Wordline {
     this.wordline.html(markup);
 
     this.inputline.width(this.wordline.width());
-    
+
     this.hightlightKeyTarget();
   }
 

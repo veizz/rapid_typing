@@ -1,4 +1,6 @@
-import words from '../utils/words-cpp.js';
+import WordsCPP from '../utils/word/words-cpp.js';
+
+let words = new WordsCPP().getLine();
 export default class Generator {
   constructor(args) {
     this.interval = args.interval || 6e4;

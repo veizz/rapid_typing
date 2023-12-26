@@ -266,6 +266,7 @@ i.ion-bug{
 .mode-dropdown li {
   margin: 2px 0;
   list-style: none;
+  white-space: nowrap;
 }
 
 .mode-dropdown li:hover {
