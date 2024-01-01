@@ -5,6 +5,10 @@ import WordsNumber from "../utils/word/words-number";
 import WordsCPP from "../utils/word/words-cpp";
 import WordsSymbol from "../utils/word/words-symbol";
 import WordsDict from "../utils/word/words";
+import WordsIndexFinger from "../utils/word/words-index-finger";
+import WordsMiddleFinger from "../utils/word/words-middle-finger";
+import WordsLittleFinger from "../utils/word/words-little-finger 2";
+import WordsForthFinger from "../utils/word/words-forth-finger";
 
 const wordLists = [
   {
@@ -27,24 +31,26 @@ const wordLists = [
     name: "键盘数字行",
     class: WordsNumber,
   },
-  /*
   {
     id: "index-finger",
     name: "食指区",
+    class: WordsIndexFinger,
   },
   {
     id: "middle-finger",
     name: "中指区",
+    class: WordsMiddleFinger,
   },
   {
     id: "forth-finger",
     name: "无名指区",
+    class: WordsForthFinger
   },
   {
     id: "little-finger",
     name: "小拇指区",
+    class: WordsLittleFinger
   },
-  */
   {
     id: "cpp",
     name: "C++ 常用词",

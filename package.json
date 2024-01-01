@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --env production",
     "start": "npm run build && electron-forge start",
+    "serve": "node app.js",
     "postinstall": "npm run build",
     "dev": "webpack serve --env development",
     "package": "electron-forge package",
